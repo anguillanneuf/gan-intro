@@ -146,7 +146,7 @@ class GAN(object):
         # true data distribution (self.x) and the generated samples (self.z).
         #
         # Here we create two copies of the discriminator network (that share parameters),
-        # as you cannot use the same network with different inputs in TensorFlow.
+       # as you cannot use the same network with different inputs in TensorFlow.
         with tf.variable_scope('D') as scope:
             self.x = tf.placeholder(tf.float32, shape=(self.batch_size, 1))
             self.D1 = discriminator(self.x, self.mlp_hidden_size, self.minibatch)
